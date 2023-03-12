@@ -11,21 +11,11 @@ target_include_directories (
     main 
     PUBLIC include
     PUBLIC lib/SDL/include
-    PUBLIC lib/SDL_image
-    PUBLIC lib/SDL_mixer/include)
+    PUBLIC lib/SDL_image)
 
 option(SDL2IMAGE_INSTALL OFF)
 
-target_link_libraries(main SDL2 SDL2_image SDL2_mixer)
+target_link_libraries(main SDL2 SDL2_image)
 
 add_subdirectory (lib/SDL)
 add_subdirectory (lib/SDL_image)
-
-add_subdirectory (lib/openssl)
-
-add_subdirectory (lib/SDL_mixer/external/opus)
-add_subdirectory (lib/SDL_mixer/external/opusfile)
-add_subdirectory (lib/SDL_mixer/external/flac)
-add_subdirectory (lib/SDL_mixer/external/libmodplug)
-add_subdirectory (lib/SDL_mixer)
- 

@@ -2,7 +2,6 @@
 #include "main.h"
 #include "SDL.h"
 #include "SDL_image.h"
-#include "SDL_mixer.h"
 
 const int SCREEN_WIDTH = 720;
 const int SCREEN_HEIGHT = 480;
@@ -43,12 +42,6 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    if (Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096) < 0)
-    {
-        std::cout << "Error: " << std::endl;
-        return 1;
-    }
-
     Objeto objeto;
 
     SDL_Event e;
@@ -82,7 +75,6 @@ int main(int argc, char **argv)
     renderer = nullptr;
     window = nullptr;
 
-    Mix_CloseAudio();
     IMG_Quit();
     SDL_Quit();
 
