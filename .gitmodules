@@ -1,0 +1,6 @@
+[submodule "app/jni/lib/SDL"]
+	path = app/jni/lib/SDL
+	url = https://github.com/libsdl-org/SDL.git
+[submodule "app/jni/lib/SDL_image"]
+	path = app/jni/lib/SDL_image
+	url = https://github.com/libsdl-org/SDL_image.git
